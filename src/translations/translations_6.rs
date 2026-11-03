@@ -1,0 +1,233 @@
+#![allow(clippy::match_same_arms)]
+
+use crate::translations::types::language::Language;
+
+pub fn latency_translation(language: Language) -> &'static str {
+    match language {
+        Language::EN => "Latency",
+        Language::IT => "Latenza",
+        Language::ZH => "延迟",
+        Language::ZH_TW => "延遲",
+        Language::RU => "Задержка",
+        Language::SQ => "Latenca",
+        Language::FR => "Latence",
+        Language::ES => "Latencia",
+        Language::VI => "Độ trễ",
+        // Language::AR => "زمن الاستجابة",
+        Language::ID => "Latensi",
+        _ => "Latency",
+    }
+}
+
+pub fn ipfix_exporter_translation(language: Language) -> &'static str {
+    match language {
+        Language::EN => "IPFIX exporter",
+        Language::IT => "Esportatore IPFIX",
+        Language::ZH => "IPFIX 导出器",
+        Language::ZH_TW => "IPFIX 匯出器",
+        Language::RU => "Экспортёр IPFIX",
+        Language::SQ => "IPFIX-eksportuesi",
+        Language::FR => "Exportateur IPFIX",
+        Language::ES => "Exportador IPFIX",
+        Language::VI => "Bộ xuất IPFIX",
+        // Language::AR => "مُصدِّر IPFIX",
+        Language::ID => "Pengekspor IPFIX",
+        _ => "IPFIX exporter",
+    }
+}
+
+pub fn ipfix_collector_translation(language: Language) -> &'static str {
+    match language {
+        Language::EN => "IPFIX collector",
+        Language::IT => "Collettore IPFIX",
+        Language::ZH => "IPFIX 收集器",
+        Language::ZH_TW => "IPFIX 收集器",
+        Language::RU => "Коллектор IPFIX",
+        Language::SQ => "IPFIX-koleksionuesi",
+        Language::FR => "Collecteur IPFIX",
+        Language::ES => "Colector IPFIX",
+        Language::VI => "Bộ thu thập IPFIX",
+        // Language::AR => "مُجمِّع IPFIX",
+        Language::ID => "Pengumpul IPFIX",
+        _ => "IPFIX collector",
+    }
+}
+
+pub fn waiting_ipfix_connections_translation(language: Language) -> &'static str {
+    match language {
+        Language::EN => "No traffic has been observed yet. Waiting for IPFIX flows...",
+        Language::IT => "Nessun tipo di traffico è stato osservato finora. Attendo flussi IPFIX...",
+        Language::ZH => "尚未观察到任何流量。正在等待 IPFIX 流...",
+        Language::ZH_TW => "尚未觀察到任何流量。正在等待 IPFIX 流量...",
+        Language::RU => "Пока трафик не наблюдался. Ожидание потоков IPFIX...",
+        Language::SQ => "Nuk po vërehet ndonjë trafik. Në pritje të flukseve IPFIX...",
+        Language::FR => "Aucun trafic n'a encore été observé. En attente de flux IPFIX...",
+        Language::ES => "Aún no se ha observado tráfico. Esperando flujos IPFIX...",
+        Language::VI => "Chưa ghi nhận lưu lượng nào. Hiện đang chờ các luồng IPFIX...",
+        // Language::AR => "لم تُرصد أي حركة مرور بعد. في انتظار تدفقات IPFIX...",
+        Language::ID => "Belum ada lalu lintas yang teramati. Menunggu aliran IPFIX...",
+        _ => "No traffic has been observed yet. Waiting for IPFIX flows...",
+    }
+}
+
+pub fn invalid_ipfix_received_translation(language: Language) -> &'static str {
+    match language {
+        Language::EN => "Incoming traffic isn't decodable as IPFIX...",
+        Language::IT => "Il traffico in entrata non è decodificabile come IPFIX...",
+        Language::ZH => "传入的流量无法解码为 IPFIX...",
+        Language::ZH_TW => "傳入的流量無法解碼為 IPFIX...",
+        Language::RU => "Входящий трафик невозможно декодировать как IPFIX...",
+        Language::SQ => "Trafiku në hyrje nuk mund të deshifrohet si IPFIX...",
+        Language::FR => "Le trafic entrant ne peut pas être décodé au format IPFIX...",
+        Language::ES => "El tráfico entrante no se puede decodificar como IPFIX...",
+        Language::VI => "Lưu lượng truy cập đến không thể giải mã dưới dạng IPFIX...",
+        // Language::AR => "يتعذر فك ترميز حركة المرور الواردة بصيغة IPFIX...",
+        Language::ID => "Lalu lintas masuk tidak dapat diuraikan sebagai IPFIX...",
+        _ => "Incoming traffic isn't decodable as IPFIX...",
+    }
+}
+
+pub fn make_sure_valid_ipfix_translation(language: Language) -> &'static str {
+    match language {
+        Language::EN => "Make sure the exporter is sending valid IPFIX flows to this collector.",
+        Language::IT => {
+            "Assicurati che l'esportatore stia inviando flussi IPFIX validi a questo collettore."
+        }
+        Language::ZH => "请确保导出器正在向此收集器发送有效的 IPFIX 流。",
+        Language::ZH_TW => "請確保匯出器正在向此收集器傳送有效的 IPFIX 流量。",
+        Language::RU => {
+            "Убедитесь, что экспортёр отправляет корректные потоки IPFIX на этот коллектор."
+        }
+        Language::SQ => {
+            "Sigurohuni që eksportuesi të dërgojë flukse të sakta IPFIX te koleksionuesi."
+        }
+        Language::FR => "Vérifiez que l'exportateur envoie des flux IPFIX valides à ce collecteur.",
+        Language::ES => {
+            "Asegúrese de que el exportador esté enviando flujos IPFIX válidos a este colector."
+        }
+        Language::VI => {
+            "Đảm bảo bên xuất dữ liệu đang gửi các luồng IPFIX hợp lệ tới bộ thu thập này."
+        }
+        // Language::AR => "تأكد من أن المُصدِّر يرسل تدفقات IPFIX صالحة إلى هذا المُجمِّع.",
+        Language::ID => "Pastikan pengekspor mengirim aliran IPFIX yang valid ke pengumpul ini.",
+        _ => "Make sure the exporter is sending valid IPFIX flows to this collector.",
+    }
+}
+
+pub fn disable_update_checks_translation(language: Language) -> &'static str {
+    match language {
+        Language::EN => "Disable update checks",
+        Language::IT => "Disattiva il controllo degli aggiornamenti",
+        Language::ZH => "禁用更新检查",
+        Language::ZH_TW => "停用更新檢查",
+        Language::RU => "Отключить проверку обновлений",
+        Language::SQ => "Çaktivizoj kontrollin e përditësimeve",
+        Language::FR => "Désactiver la recherche de mises à jour",
+        Language::ES => "Desactivar comprobación de actualizaciones",
+        Language::VI => "Ngừng kiểm tra bản cập nhật mới",
+        // Language::AR => "تعطيل التحقق من وجود تحديثات",
+        Language::ID => "Nonaktifkan pemeriksaan pembaruan",
+        _ => "Disable update checks",
+    }
+}
+
+pub fn notify_on_updates_translation(language: Language) -> &'static str {
+    match language {
+        Language::EN => "Notify when updates are available",
+        Language::IT => "Avvisami quando sono disponibili aggiornamenti",
+        Language::ZH => "有可用更新时通知我",
+        Language::ZH_TW => "有可用更新時通知我",
+        Language::RU => "Уведомлять о доступных обновлениях",
+        Language::SQ => "Njoftoj kur ka përditësime",
+        Language::FR => "M'avertir lorsque des mises à jour sont disponibles",
+        Language::ES => "Notificarme cuando haya actualizaciones disponibles",
+        Language::VI => "Thông báo khi có bản cập nhật mới",
+        // Language::AR => "إشعاري عند توفر تحديثات",
+        Language::ID => "Beri tahu saat pembaruan tersedia",
+        _ => "Notify when updates are available",
+    }
+}
+
+pub fn update_status_translation(language: Language) -> &'static str {
+    match language {
+        Language::EN => "Update status",
+        Language::IT => "Stato degli aggiornamenti",
+        Language::ZH => "更新状态",
+        Language::ZH_TW => "更新狀態",
+        Language::RU => "Статус обновлений",
+        Language::SQ => "Statusi i përditësimeve",
+        Language::FR => "État des mises à jour",
+        Language::ES => "Estado de las actualizaciones",
+        Language::VI => "Cập nhật trạng thái",
+        // Language::AR => "حالة التحديث",
+        Language::ID => "Status pembaruan",
+        _ => "Update status",
+    }
+}
+
+pub fn up_to_date_translation(language: Language) -> &'static str {
+    match language {
+        Language::EN => "You are up to date!",
+        Language::IT => "Sei aggiornato!",
+        Language::ZH => "您已是最新版本！",
+        Language::ZH_TW => "您已是最新版本！",
+        Language::RU => "У вас актуальная версия!",
+        Language::SQ => "Keni versionin e fundit!",
+        Language::FR => "Vous êtes à jour !",
+        Language::ES => "¡Estás al día!",
+        Language::VI => "Bạn đang dùng phiên bản mới nhất!",
+        // Language::AR => "أنت تستخدم أحدث إصدار!",
+        Language::ID => "Anda sudah menggunakan versi terbaru!",
+        _ => "You are up to date!",
+    }
+}
+
+pub fn expanded_view_translation(language: Language) -> &'static str {
+    match language {
+        Language::EN => "Expanded view",
+        Language::IT => "Vista espansa",
+        Language::ZH => "展开视图",
+        Language::ZH_TW => "展開檢視",
+        Language::RU => "Расширенный вид",
+        Language::SQ => "Dritare e zgjeruar",
+        Language::FR => "Vue développée",
+        Language::ES => "Vista expandida",
+        Language::VI => "Chế độ xem mở rộng",
+        // Language::AR => "العرض الموسع",
+        Language::ID => "Tampilan diperluas",
+        _ => "Expanded view",
+    }
+}
+
+pub fn totals_translation(language: Language) -> &'static str {
+    match language {
+        Language::EN => "Totals",
+        Language::IT | Language::SQ => "Totali",
+        Language::ZH => "总计",
+        Language::ZH_TW => "總計",
+        Language::RU => "Итого",
+        Language::FR => "Totaux",
+        Language::ES => "Totales",
+        Language::VI => "Tổng cộng",
+        // Language::AR => "الإجماليات",
+        Language::ID => "Total",
+        _ => "Totals",
+    }
+}
+
+pub fn current_rates_translation(language: Language) -> &'static str {
+    match language {
+        Language::EN => "Current rates",
+        Language::IT => "Intensità attuale",
+        Language::ZH => "当前速率",
+        Language::ZH_TW => "目前速率",
+        Language::RU => "Текущие скорости",
+        Language::SQ => "Intensiteti aktual",
+        Language::FR => "Débits actuels",
+        Language::ES => "Tasas actuales",
+        Language::VI => "Mức phí hiện tại",
+        // Language::AR => "معدلات النقل الحالية",
+        Language::ID => "Laju saat ini",
+        _ => "Current rates",
+    }
+}
